@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "skipservercheck",
+	"version": "${version}",
+	"name": "Frostbyte's Skip Server Movement Check",
+	"description": "Skips the movement check on the server side that causes rubber-banding due to \"moved too quickly\" or \"moved wrongly\".",
+	"authors": [
+		"FrostbyteGames"
+	],
+	"license": "CC-BY-NC",
+	"icon": "assets/skipservercheck/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.frostbyte.skipservercheck.SkipServerMovementCheck"
+		]
+	},
+	"mixins": [
+		"skipservercheck.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
