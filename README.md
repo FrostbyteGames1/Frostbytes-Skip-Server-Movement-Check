@@ -20,3 +20,5 @@ This means that client movement is not validated by the server, so server owners
 Modrinth - https://modrinth.com/mod/frostbytes-skip-server-movement-check
 
 Curseforge - https://www.curseforge.com/minecraft/mc-mods/frostbytes-skip-server-movement-check
+
+[![BisectHosting](https://www.bisecthosting.com/partners/custom-banners/92987bf2-5957-4acb-8dd9-0fadd0fdd7e4.webp)](https://www.bisecthosting.com/frostbyte)
