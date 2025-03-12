@@ -3,9 +3,12 @@
 	"package": "net.frostbyte.skipservercheck.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-      "ServerPlayNetworkHandlerMixin"
+		"ServerPlayNetworkHandlerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"server": [
+		"ServerPlayNetworkHandlerMixin"
+	]
 }
