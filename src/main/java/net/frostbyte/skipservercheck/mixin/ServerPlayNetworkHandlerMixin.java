@@ -32,5 +32,4 @@ public abstract class ServerPlayNetworkHandlerMixin {
 	private double modifyVehicleMoveDoubleConst(double original) {
 		return Float.MAX_VALUE;
 	}
-
 }
