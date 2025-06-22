@@ -13,12 +13,13 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Environment(EnvType.SERVER)
 @Mixin(value = ServerPlayNetworkHandler.class, priority = 1001)
 public abstract class ServerPlayNetworkHandlerMixin {
-	@Redirect(method = "onPlayerMove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;lengthSquared()D", ordinal = 0))
+
+	@Redirect(method = "onPlayerMove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;lengthSquared()D"))
 	public double preLengthSquared(Vec3d instance) {
 		return Float.MAX_VALUE;
 	}
 
-	@Redirect(method = "onVehicleMove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;lengthSquared()D", ordinal = 0))
+	@Redirect(method = "onVehicleMove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;lengthSquared()D"))
 	public double preVehicleLengthSquared(Vec3d instance) {
 		return Float.MAX_VALUE;
 	}
@@ -28,8 +29,9 @@ public abstract class ServerPlayNetworkHandlerMixin {
 		return Float.MAX_VALUE;
 	}
 
-	@ModifyConstant(method = "onVehicleMove", constant = @Constant(doubleValue = 0.0625, ordinal = 1))
+	@ModifyConstant(method = "onVehicleMove", constant = @Constant(doubleValue = 0.0625))
 	private double modifyVehicleMoveDoubleConst(double original) {
 		return Float.MAX_VALUE;
 	}
+
 }
