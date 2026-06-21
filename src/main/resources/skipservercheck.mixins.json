@@ -1,14 +1,14 @@
 {
 	"required": true,
 	"package": "net.frostbyte.skipservercheck.mixin",
-	"compatibilityLevel": "JAVA_21",
+	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ServerPlayNetworkHandlerMixin"
+		"ServerGamePacketListenerImplMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
 	},
 	"server": [
-		"ServerPlayNetworkHandlerMixin"
+		"ServerGamePacketListenerImplMixin"
 	]
 }
