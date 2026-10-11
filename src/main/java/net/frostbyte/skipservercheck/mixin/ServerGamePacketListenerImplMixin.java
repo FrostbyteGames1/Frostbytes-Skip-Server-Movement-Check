@@ -11,12 +11,12 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(value = ServerGamePacketListenerImpl.class, priority = 1001)
 public abstract class ServerGamePacketListenerImplMixin {
 
-	@ModifyConstant(method = "handleMovePlayer", constant = @Constant(floatValue = 100.0F))
+	@ModifyConstant(method = "handlePlayerPositionChange", constant = @Constant(floatValue = 100.0F))
 	private float modifyPlayerMaxSpeed(float speed) {
 		return Float.MAX_VALUE;
 	}
 
-	@ModifyConstant(method = "handleMovePlayer", constant = @Constant(floatValue = 300.0F))
+	@ModifyConstant(method = "handlePlayerPositionChange", constant = @Constant(floatValue = 300.0F))
 	private float modifyElytraMaxSpeed(float speed) {
 		return Float.MAX_VALUE;
 	}
@@ -26,7 +26,7 @@ public abstract class ServerGamePacketListenerImplMixin {
 		return Double.MAX_VALUE;
 	}
 
-	@ModifyConstant(method = "handleMovePlayer", constant = @Constant(doubleValue = 0.0625))
+	@ModifyConstant(method = "handlePlayerPositionChange", constant = @Constant(doubleValue = 0.0625))
 	private double modifyPlayerMaxMove(double speed) {
 		return Double.MAX_VALUE;
 	}
